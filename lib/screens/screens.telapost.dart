@@ -15,7 +15,7 @@ class _TelaPostState extends State<TelaPost> {
   TextEditingController valorDigitado = TextEditingController(); //Agora vai funcionar
  
   void fazerPost() async {
-    final respostaServidor = await http.post(Uri.parse("http://10.109.72.23:3000/tasks"),
+    final respostaServidor = await http.post(Uri.parse("https://arquivoapiflutter.onrender.com/tasks"),
     headers: {"Content-Type": "application/json"}, //Estou enviando um json para o POST
     body: jsonEncode({
       "title": valorDigitado.text //O novo registro da API receberá no campo Title o valor digitado

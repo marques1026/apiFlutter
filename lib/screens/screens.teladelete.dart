@@ -21,7 +21,7 @@ class _TelaDeleteState extends State<TelaDelete> {
  
   void fazerGet() async {
     final respostaServidor = await http.get(
-      Uri.parse("http://10.109.72.23:3000/tasks"),
+      Uri.parse("https://arquivoapiflutter.onrender.com/tasks"),
     );
  
     if (respostaServidor.statusCode == 200) {
@@ -35,7 +35,7 @@ class _TelaDeleteState extends State<TelaDelete> {
  
   void fazerDelete(final id) async {
     final respostaServidor = await http.delete(
-      Uri.parse("http://10.109.72.23:3000/tasks/$id"),
+      Uri.parse("https://arquivoapiflutter.onrender.com/tasks/$id"),
     );
  
     if (respostaServidor.statusCode == 200) {

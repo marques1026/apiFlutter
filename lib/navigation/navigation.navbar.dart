@@ -32,7 +32,9 @@ class _NavBarState extends State<NavBar> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: pages.elementAt(indexAtual),
-      bottomNavigationBar: BottomNavigationBar(items: [
+      bottomNavigationBar: BottomNavigationBar(
+        type: BottomNavigationBarType.fixed,
+        items: [
         BottomNavigationBarItem(icon:Icon(Icons.get_app),label: "Get"),
         BottomNavigationBarItem(icon:Icon(Icons.delete),label: "Delete"),
         BottomNavigationBarItem(icon:Icon(Icons.post_add),label: "Post"),

@@ -23,7 +23,7 @@ class _TelaPutState extends State<TelaPut> {
   }
  
   void fazerGet() async {
-    final respostaServidor = await http.get(Uri.parse("http://10.109.72.23:3000/tasks"));
+    final respostaServidor = await http.get(Uri.parse("https://arquivoapiflutter.onrender.com/tasks"));
     if(respostaServidor.statusCode == 200){
       final dados = jsonDecode(respostaServidor.body); //Decodifico os pacotes recebidos do http
     setState(() {
@@ -38,7 +38,7 @@ class _TelaPutState extends State<TelaPut> {
  
   void fazerPut(final id, final index) async {//precisa do id do item a ser alterado , precisa do index da lista
    //dos controladores para subir o valor novo.
-   final respostaServidor = await http.patch(Uri.parse("http://10.109.72.23:3000/tasks/$id"),
+   final respostaServidor = await http.patch(Uri.parse("https://arquivoapiflutter.onrender.com/tasks/$id"),
    headers: {"Content-type":"application/json"}, //declaro qual tipo de conteúdo estou subindo na requisição
    body: jsonEncode({
     "title": controladores[index].text
