@@ -16,7 +16,7 @@ class _SplashScreenState extends State<SplashScreen> {
     Future.delayed(// espera 2 segundos e dps realiza uma ação
     Duration(seconds: 2),
     (){
-      Navigator.push(context, MaterialPageRoute(builder: (context)=>Navbar()));
+      Navigator.push(context, MaterialPageRoute(builder: (context)=>NavBar()));
     }
     );
 }

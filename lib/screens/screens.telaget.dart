@@ -16,7 +16,7 @@ class _TelaGetState extends State<TelaGet> {
 
   void fazerGet()async {
     //requisição/servidor
-    final respostaServidor = await http.get(Uri.parse("http://10.109.72.21:3000/tasks"));
+    final respostaServidor = await http.get(Uri.parse("http://10.109.72.23:3000/tasks"));
 
     if(respostaServidor.statusCode ==200){
       final dados = jsonDecode(respostaServidor.body);
